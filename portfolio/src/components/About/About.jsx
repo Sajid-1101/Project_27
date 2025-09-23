@@ -34,7 +34,7 @@ const About = () => {
           <p className="w-2/3 mb-8 text-gray-300">
             I’m a 3rd-year Computer Engineering student at Jamia Millia Islamia, passionate about building real-world projects and exploring new technologies. This portfolio showcases my skills, project work, and academic journey in software development.
           </p>
-          <a href="/files/Blank_Resume_Sajid.pdf"
+          <a href="/files/Resume_Sajid.pdf"
           download>
             <button className="bg-purple-600 p-4 rounded-3xl shadow-purple-500/30 shadow-lg text-shadow-md text-shadow-black hover:bg-purple-500 hover:text-shadow-amber-100/20 hover:text-white cursor-pointer">
             Download CV
