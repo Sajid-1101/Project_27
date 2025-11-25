@@ -36,7 +36,8 @@ const About = () => {
           </p>
           <a href="/files/Resume_Sajid.pdf"
           download>
-            <button className="bg-purple-600 p-4 rounded-3xl shadow-purple-500/30 shadow-lg text-shadow-md text-shadow-black hover:bg-purple-500 hover:text-shadow-amber-100/20 hover:text-white cursor-pointer">
+            <button className="bg-linear-to-l from-purple-700 via-purple-200 to-purple-700 p-4 rounded-3xl shadow-purple-500/30 shadow-lg text-shadow-md text-shadow-black 
+            hover:from-black hover:to-black hover:via-gray-900 hover:shadow-blue-400/20 hover:border cursor-pointer font-bold">
             Download CV
           </button>
           </a>
