@@ -1,151 +1,153 @@
 import React from "react";
-import employee from '../../assets/work_logo/emp-manager-management.png';
-import rps from '../../assets/work_logo/rps.png';
-import tictactoe from '../../assets/work_logo/tictactoe.png';
-import weather from '../../assets/work_logo/weather.png';
+import employee from "../../assets/work_logo/emp-manager-management.png";
+import tictactoe from "../../assets/work_logo/tictactoe.png";
+
+const projects = [
+  {
+    title: "Employee Shift Management App",
+    linkLabel: "GitHub",
+    link: "https://github.com/Sajid-1101/Full-Stack-Project",
+    image: "https://raw.githubusercontent.com/Sajid-1101/Full-Stack-Project/main/images/DashboardViewMode.png",
+    imageAlt: "Employee Shift Management dashboard preview",
+    description:
+      "A full-stack employee shift management application for creating, updating, and tracking employee schedules. It includes admin and user dashboards, drag-and-drop calendar scheduling, timezone-aware shift handling, authentication, and visual statistics.",
+    techStack:
+      "React 19, React Router, Tailwind CSS, ScheduleX, Recharts, Axios, Vite, Express.js, MongoDB, Mongoose, JWT, bcryptjs, moment-timezone",
+    learningOutcomes: [
+      "Built a full-stack scheduling workflow with separate frontend and backend responsibilities.",
+      "Implemented JWT-based authentication and authorization for secure user access.",
+      "Worked with calendar-based shift creation, editing, and visualization using ScheduleX.",
+      "Managed shift and user data through REST APIs with Express, MongoDB, and Mongoose.",
+      "Added statistics and chart views to make shift data easier to understand.",
+    ],
+  },
+  {
+    title: "RAG-Based AI Teaching Assistant",
+    linkLabel: "GitHub",
+    link: "https://github.com/Sajid-1101/RAG-Based---AI-Teaching-Assistant",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=900&q=80",
+    imageAlt: "RAG based AI teaching assistant",
+    description:
+      "An AI-powered teaching assistant built around Retrieval-Augmented Generation. It helps students ask subject-related questions and receive context-aware answers by retrieving relevant knowledge before generating the response.",
+    techStack: "Python, Machine Learning, RAG, NLP, Embeddings, Vector Database, ReactJS",
+    learningOutcomes: [
+      "Learned how retrieval improves AI answer accuracy by grounding responses in relevant context.",
+      "Worked with document/question retrieval flow, embeddings, and vector-based semantic search.",
+      "Understood how to connect AI response generation with a student-friendly teaching interface.",
+      "Improved understanding of practical RAG pipelines for educational use cases.",
+    ],
+  },
+  {
+    title: "Employee_Manager_Management",
+    linkLabel: "See Live",
+    link: "https://emp-manager-management.netlify.app/",
+    image: employee,
+    imageAlt: "Employee management project preview",
+    description:
+      "A web-based platform for managing company employees. It includes features like user authentication, role-based dashboards, and employee data management.\n\nAdmin Login: admin@company.com / 123\nEmployee (Sam) Login: e@c.com / 123",
+    techStack: "ReactJS, TailwindCSS",
+    learningOutcomes: [
+      "Built a role-based Employee Management System using React.js.",
+      "Implemented Admin and Employee login with conditional rendering.",
+      "Used React hooks for state and lifecycle management.",
+      "Handled forms and basic validation in React.",
+      "Designed UI responsive for sm, md, and lg screens using CSS.",
+      "Deployed the app on Netlify for live access.",
+    ],
+  },
+  {
+    title: "TicTacToe-TwoPlayer-Game",
+    linkLabel: "See Live",
+    link: "https://tictac-t-o-e-game.netlify.app/",
+    image: tictactoe,
+    imageAlt: "Tic Tac Toe project preview",
+    description:
+      "A two-player Tic Tac Toe game where players take turns marking X or O on a 3x3 grid, aiming to align three symbols in a row, column, or diagonal. Includes win/draw detection and reset functionality.",
+    techStack: "HTML, CSS, JavaScript",
+    learningOutcomes: [
+      "Built a fully functional Tic Tac Toe game using HTML, CSS, and JavaScript.",
+      "Gained understanding of game logic, event handling, and DOM manipulation.",
+      "Implemented turn-based gameplay with win/tie detection.",
+      "Practiced modular code structure and basic debugging.",
+      "Deployed the project on Netlify for public access.",
+    ],
+  }
+  
+];
+
 const Work = () => {
+  const openProject = (link) => {
+    window.location.assign(link);
+  };
+
   return (
-    <div id="Work" className="scroll-smooth scroll-mt-20 flex flex-col flex-wrap items-center mb-16">
+    <section
+      id="Work"
+      className="scroll-smooth scroll-mt-20 mb-16 px-4 sm:px-8 lg:px-20"
+    >
       <h1 className="text-center text-white font-bold text-3xl">Projects</h1>
       <div className="w-28 h-1 bg-purple-700 mx-auto"></div>
       <p className="text-gray-300/50 font-semibold text-center p-4 mb-4">
         A showcase of my projects I have worked on, highlighting my skills and
         experience in various technology
       </p>
-      <div className="flex flex-col flex-wrap items-center gap-4">
-        <div className="flex flex-wrap  justify-center gap-4">
-          <div className="md:w-[32rem] sm:mx-32 md:mx-0 bg-gradient-to-t from-gray-900 to-black p-4  rounded-2xl border-2 border-purple-700 text-white h-full hover:bg-transparent shadow-2xl shadow-purple-500/30">
-            <a href="https://emp-manager-management.netlify.app/" 
-             target="_blank" rel="noopener noreferrer">
-              <img
-              src={employee}
-              alt=""
-              className=" border border-white rounded-lg object-cover w-full h-[15rem] shadow-2xl hover:shadow-purple-500/50"
-            />
-            </a>
-            <h3 className="font-semibold p-2">Employee_Manager_Management : <a href="https://emp-manager-management.netlify.app/" 
-             target="_blank" rel="noopener noreferrer"
-            className="text-purple-500 text-shadow-lg hover:text-blue-500 hover:text-shadow-blue-500/20">See Live</a></h3>
-            
-            <p className="p-2 text-gray-300">
-              <span className="text-white font-medium">Description :</span> <br/> Description:
-                A web-based platform for managing company employees. It includes features like user authentication, role-based dashboards, and employee data management. <br />
-                Admin Login: admin@company.com / 123 <br/>
-                Employee (Sam) Login: e@c.com / 123
-            </p>
-            <p className="p-2 text-gray-300">
-              <span className="text-white font-medium">Tech Stack :</span> <br/> ReactJS, TailwindCSS
-            </p>
-            <p className="p-2 text-gray-300">
-              <span className="font-medium text-white">Learning Outcomes :</span> <br/> Built a role-based Employee Management System using React.js.
-<br/>
-Implemented Admin and Employee login with conditional rendering. <br/>
 
-Used React hooks for state and lifecycle management.
-<br/>
-Handled forms and basic validation in React.
-<br/>
-Designed UI responsive for sm, md, and lg screens using CSS.
-<br/>
-Deployed the app on Netlify for live access.
-
-
-            </p>
-          </div>
-          <div className="md:w-[32rem] sm:mx-32 md:mx-0 bg-gradient-to-t from-gray-900 to-black p-4  rounded-2xl border-2 border-purple-700 text-white h-full hover:bg-transparent shadow-2xl shadow-purple-500/30 flex flex-col items-stretch">
-            <a href="https://tictac-t-o-e-game.netlify.app/" 
-             target="_blank" rel="noopener noreferrer">
+      <div className="mx-auto grid w-full max-w-6xl grid-cols-1 gap-5 lg:grid-cols-2">
+        {projects.map((project) => (
+          <article
+            key={project.title}
+            className="flex h-[42rem] w-full flex-col rounded-2xl border-2 border-purple-700 bg-gradient-to-t from-gray-900 to-black p-4 text-white shadow-2xl shadow-purple-500/30 transition-colors hover:bg-transparent sm:h-[43rem]"
+          >
+            <button
+              type="button"
+              onClick={() => openProject(project.link)}
+              className="relative z-10 block w-full cursor-pointer"
+              aria-label={`Open ${project.title}`}
+            >
               <img
-              src={tictactoe}
-              alt=""
-              className=" border border-white rounded-lg object-cover w-full h-[15rem] shadow-2xl hover:shadow-purple-500/50"
-            />
-            </a>
-            <h3 className="font-semibold p-2">TicTacToe-TwoPlayer-Game : <a href="https://tictac-t-o-e-game.netlify.app/" 
-             target="_blank" rel="noopener noreferrer"
-             className="text-purple-500 text-shadow-lg hover:text-blue-500 hover:text-shadow-blue-500/20">See Live</a></h3>
-            
-            <p className="p-2 text-gray-300">
-              <span className="text-white font-medium">Description :</span> <br/> Description:
-                A two-player Tic Tac Toe game where players take turns marking X or O on a 3x3 grid, aiming to align three symbols in a row, column, or diagonal. Includes win/draw detection and reset functionality.
-            </p>
-            <p className="p-2 text-gray-300">
-              <span className="text-white font-medium">Tech Stack :</span> <br/> HTML, CSS, JavaScript
-            </p>
-            <p className="p-2 text-gray-300">
-              <span className="font-medium text-white">Learning Outcomes :</span> <br/> Built a fully functional Tic Tac Toe game using HTML, CSS, and JavaScript. <br/>
+                src={project.image}
+                alt={project.imageAlt}
+                className="h-52 w-full rounded-lg border border-white object-cover shadow-2xl hover:shadow-purple-500/50 sm:h-60"
+              />
+            </button>
 
-Gained understanding of game logic, event handling, and DOM manipulation.
-<br/>
-Implemented turn-based gameplay with win/tie detection.
-<br/>
-Practiced modular code structure and basic debugging.
-<br/>
-Deployed the project on Netlify for public access
-            </p> 
-            <br/>
-          </div>
-        </div>
-        <div className="flex flex-wrap gap-4 justify-center">
-          <div className="md:w-[32rem] md:mx-0 sm:mx-32 bg-gradient-to-t from-gray-900 to-black p-4  rounded-2xl border-2 border-purple-700 text-white h-full hover:bg-transparent shadow-2xl shadow-purple-500/30">
-            <a href="https://rps-java-game.netlify.app/"
-            target="_blank" rel="noopener noreferrer">
-              <img
-              src={rps}
-              alt=""
-              className=" border border-white rounded-lg object-cover w-full h-[15rem] shadow-2xl hover:shadow-purple-500/50"
-            />
-            </a>
-            <h3 className="font-semibold p-2">RockPaperScissor-1Player-Game : <a href="https://rps-java-game.netlify.app/"
-            target="_blank" rel="noopener noreferrer" className="text-purple-500 text-shadow-lg hover:text-blue-500 hover:text-shadow-blue-500/20">See Live</a></h3>
-            
-            <p className="p-2 text-gray-300">
-              <span className="text-white font-medium">Description :</span> <br/>A simple and interactive web game built using HTML, CSS, and JavaScript. Users play against the computer by choosing rock, paper, or scissors. The game includes real-time score tracking and displays the result after each round.
-            </p>
-            <p className="p-2 text-gray-300">
-              <span className="text-white font-medium">Tech Stack :</span> <br/> HTML, CSS, JavaScript
-            </p>
-            <p className="p-2 text-gray-300">
-              <span className="font-medium text-white">Learning Outcomes :</span> <br/>Gained hands-on experience with JavaScript fundamentals and user interaction.
-<br/>
-Implemented game logic, random choice generation, and score management.
-<br/>
-Practiced DOM manipulation for real-time updates and result display.
-<br/>
-Improved CSS styling skills to create an engaging UI.
-<br/>
-Deployed the game on Netlify to make it publicly accessible.
-            </p>
-          </div>
-          <div className="md:w-[32rem] md:mx-0 sm:mx-32 bg-gradient-to-t from-gray-900 to-black p-4  rounded-2xl border-2 border-purple-700 text-white h-full hover:bg-transparent shadow-2xl shadow-purple-500/30">
-            <a href="https://weather-mui.netlify.app/" target="_blank" rel="noopener noreferrer">
-              <img
-              src={weather}
-              alt=""
-              className=" border border-white rounded-lg object-cover w-full h-[15rem] shadow-2xl hover:shadow-purple-500/50"
-            />
-            </a>
-            <h3 className="font-semibold p-2">Project01 : <a href="https://weather-mui.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-purple-500 text-shadow-lg hover:text-blue-500 hover:text-shadow-blue-500/20">See Live</a></h3>
-            
-            <p className="p-2 text-gray-300">
-              <span className="text-white font-medium">Description :</span> <br/> A sleek and responsive weather application built using React and Material-UI (MUI). It allows users to search for any city and view real-time weather details including temperature, humidity, and weather conditions.
-            </p>
-            <p className="p-2 text-gray-300">
-              <span className="text-white font-medium">Tech Stack :</span> <br/> ReactJS, Material-UI (MUI), OpenWeatherMap API 
-            </p>
-            <p className="p-2 text-gray-300">
-              <span className="font-medium text-white">Learning Outcomes :</span> <br/> Gained practical experience with React.js for building a dynamic single-page application.
-<br/>
-Learned to use Material-UI (MUI) for creating responsive and modern UI components.
-<br/>
-Implemented API integration using Axios to fetch live weather data from OpenWeatherMap.
-<br/>
-Deployed the app on Netlify, understanding the basics of frontend deployment.
-            </p>
-          </div>
-        </div>
+            <h3 className="px-2 pt-4 pb-2 font-semibold break-words">
+              <button
+                type="button"
+                onClick={() => openProject(project.link)}
+                className="relative z-10 mt-2 inline-flex cursor-pointer items-center rounded-full border border-purple-400/70 bg-purple-700/20 px-4 py-2 text-sm font-bold text-purple-200 shadow-lg shadow-purple-500/20 transition-all duration-300 hover:-translate-y-0.5 hover:border-cyan-300 hover:bg-cyan-500/20 hover:text-cyan-200 hover:shadow-cyan-400/30"
+              >
+                {project.linkLabel}
+              </button>
+            </h3>
+
+            <div className="min-h-0 flex-1 overflow-y-auto pr-2 text-sm leading-relaxed sm:text-base">
+              <p className="p-2 text-gray-300 whitespace-pre-line">
+                <span className="text-white font-medium">Description :</span>
+                <br />
+                {project.description}
+              </p>
+              <p className="p-2 text-gray-300">
+                <span className="text-white font-medium">Tech Stack :</span>
+                <br />
+                {project.techStack}
+              </p>
+              <div className="p-2 text-gray-300">
+                <span className="font-medium text-white">
+                  Learning Outcomes :
+                </span>
+                <ul className="mt-2 list-disc space-y-1 pl-5">
+                  {project.learningOutcomes.map((outcome) => (
+                    <li key={outcome}>{outcome}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </article>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 

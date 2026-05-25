@@ -2,3 +2,95 @@
 html {
   scroll-behavior: smooth;
 }
+
+.site-glow-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.site-glow-bg::before {
+  content: "";
+  position: fixed;
+  inset: -25%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 20%, rgb(34 211 238 / 0.18), transparent 28%),
+    radial-gradient(circle at 35% 35%, rgb(168 85 247 / 0.18), transparent 30%),
+    radial-gradient(circle at 70% 70%, rgb(236 72 153 / 0.12), transparent 28%);
+  filter: blur(18px);
+  opacity: 0.45;
+  animation: sectionGlowMove 16s ease-in-out infinite alternate;
+}
+
+#About {
+  position: relative;
+  overflow: hidden;
+}
+
+#About::after {
+  content: "";
+  position: absolute;
+  top: -35%;
+  left: 50%;
+  width: 0.35rem;
+  height: 175%;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgb(34 211 238 / 0.46),
+    rgb(168 85 247 / 0.5),
+    rgb(236 72 153 / 0.36),
+    transparent
+  );
+  box-shadow:
+    0 0 16px rgb(34 211 238 / 0.42),
+    0 0 36px rgb(168 85 247 / 0.36),
+    0 0 62px rgb(236 72 153 / 0.25);
+  filter: blur(0.5px);
+  opacity: 0.48;
+  transform: rotate(28deg);
+  animation: aboutGlowLine 7s ease-in-out infinite alternate;
+}
+
+#About > * {
+  position: relative;
+  z-index: 1;
+}
+
+.skill-float {
+  animation: skillFloat 5.5s ease-in-out infinite;
+}
+
+@keyframes skillFloat {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(8px);
+  }
+}
+
+@keyframes sectionGlowMove {
+  from {
+    transform: translate(-8%, -8%) scale(1);
+  }
+  to {
+    transform: translate(10%, 10%) scale(1.08);
+  }
+}
+
+@keyframes aboutGlowLine {
+  from {
+    left: 8%;
+    transform: rotate(28deg);
+  }
+  to {
+    left: 92%;
+    transform: rotate(28deg);
+  }
+}

@@ -1,16 +1,18 @@
 import React from 'react'
-import { education } from '../../constants'
+
+const jmiLogo = 'https://upload.wikimedia.org/wikipedia/en/d/df/Jamia_Millia_Islamia_Logo.svg'
+const cbseLogo = 'https://upload.wikimedia.org/wikipedia/en/9/95/CBSE_new_logo.svg'
 
 const Education = () => {
   return (
-    <div id='Education' className='scroll-mt-17 pb-4 flex flex-col items-center mb-16'>
+    <div id='Education' className='scroll-mt-17 pb-4 flex flex-col items-center mb-16 px-4 sm:px-8 lg:px-20'>
       <h1 className='text-white text-3xl font-bold'>Education</h1>
       <div className='w-36 h-1 bg-purple-700'></div>
       <p className='text-gray-300/50 text-center font-semibold mb-4 p-4'>My education has been a journey of learning and development. Here are the details of my academic background</p>
       <div className=' md:w-[40rem] sm:mx-4 p-4 border border-white rounded-2xl shadow-2xl shadow-purple-300/20'>
         <div className='flex gap-4 mb-4'>
           <div className='p-2 bg-white rounded-2xl'>
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Jamia_Millia_Islamia_Logo.svg/1200px-Jamia_Millia_Islamia_Logo.svg.png" alt="" className='w-24 '/>
+            <img src={jmiLogo} alt="Jamia Millia Islamia logo" className='w-24 h-24 object-contain'/>
           </div>
           <div className='text-white'>
             <h1 className='font-bold text-2xl'>B.Tech Computer Engineering</h1>
@@ -27,7 +29,7 @@ const Education = () => {
       <div className=' md:w-[40rem] sm:mx-4 p-4 border border-white rounded-2xl shadow-2xl shadow-purple-300/20'>
         <div className='flex gap-4 mb-4'>
           <div className='p-2 bg-white rounded-2xl'>
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Jamia_Millia_Islamia_Logo.svg/1200px-Jamia_Millia_Islamia_Logo.svg.png" alt="" className='w-24 '/>
+            <img src={jmiLogo} alt="Jamia Millia Islamia logo" className='w-24 h-24 object-contain'/>
           </div>
           <div className='text-white'>
             <h1 className='font-bold text-2xl'>Class XII<sup>th</sup> - Syed Abid Hussain Sen. Sec. School</h1>
@@ -44,7 +46,7 @@ const Education = () => {
       <div className=' md:w-[40rem] sm:mx-4 p-4 border border-white rounded-2xl shadow-2xl shadow-purple-300/20'>
         <div className='flex gap-4 mb-4'>
           <div className='p-2 bg-white rounded-2xl'>
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/95/CBSE_new_logo.svg/1200px-CBSE_new_logo.svg.png" alt="" className='w-24 h-24'/>
+            <img src={cbseLogo} alt="CBSE logo" className='w-24 h-24 object-contain'/>
           </div>
           <div className='text-white'>
             <h1 className='font-bold text-2xl'>Class X<sup>th</sup>-Govt. Boys Sen. Sec. School</h1>

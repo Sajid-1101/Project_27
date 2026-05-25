@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import About from './components/About/About'
 import Contact from './components/Contact/Contact'
@@ -11,14 +10,14 @@ import Navbar from './components/Navbar/Navbar'
 function App() {
 
   return (
-    <div className='bg-[#050414]'>
-      <div className='relative pt-10'>
+    <div className='site-glow-bg bg-[#050414]'>
+      <div className='relative z-1 pt-10'>
         <Navbar/>
         <About/>
+        <Experience/>
         <Education/>
         <Skills/>
         <Work/>
-        {/* <Experience/> */}
         <Contact/>
         <Footer/>
       </div>
