@@ -27,9 +27,8 @@ const Experience = () => {
           Role: AI/ML Intern
         </h3>
         <p className='text-gray-300 text-md leading-relaxed'>
-          Worked on building an AI chatbot, focusing on practical AI/ML concepts,
-          chatbot flow, response handling, and creating a useful conversational
-          experience.
+          Engineered an Agentic AI chatbot by orchestrating specialized Knowledge, Policy, and Conversational agents to improve response quality and contextual understanding. Enhanced reliability through hallucination reduction mechanisms, agent coordination, and policy-based validation while optimizing end-to-end conversational workflows.
+
         </p>
       </div>
     </div>

@@ -45,7 +45,7 @@ const Navbar = () => {
         </a>
         <ul className='hidden lg:flex justify-center lg:space-x-10 xl:space-x-16 text-white font-bold text-md'>
           {menuItems.map((item)=>(
-            <li key={item.id} className={`cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:text-purple-700 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.9)] ${activeSession === item.id ? "text-purple-700 drop-shadow-[0_0_8px_rgba(168,85,247,0.9)]" : ""}`}>
+            <li key={item.id} className={`cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:text-cyan-400 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.6)] ${activeSession === item.id ? "text-cyan-400 drop-shadow-[0_0_6px_rgba(34,211,238,0.6)]" : ""}`}>
               <button onClick={()=>handleItems(item.id)}>
                 <a href={`#${item.id}`}>{item.label}</a>
               </button>
@@ -56,13 +56,13 @@ const Navbar = () => {
           <button type='button'
           onClick={()=>openExternal(githubUrl)}
           aria-label='Open GitHub profile'
-          className='transition-all duration-300 hover:-translate-y-0.5 hover:text-purple-700 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.9)]'
+          className='transition-all duration-300 cursor-pointer hover:-translate-y-0.5 hover:text-cyan-400 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.6)]'
           > <FaGithub size={24}/>
           </button>
           <button type='button'
           onClick={()=>openExternal(linkedinUrl)}
           aria-label='Open LinkedIn profile'
-          className='transition-all duration-300 hover:-translate-y-0.5 hover:text-purple-700 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.9)]'
+          className='cursor-pointer transition-all duration-300 hover:-translate-y-0.5 hover:text-cyan-400 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.6)]'
           > <FaLinkedin size={24}/>
           </button>
         </div>
@@ -70,7 +70,7 @@ const Navbar = () => {
           type='button'
           aria-label='Toggle navigation menu'
           onClick={()=>setIsOpen(!isOpen)}
-          className='lg:hidden border border-white/20 rounded-lg p-2 hover:text-purple-700 hover:border-purple-700 hover:shadow-lg hover:shadow-purple-500/30 transition-all duration-300'
+          className='lg:hidden border border-white/20 rounded-lg p-2 hover:text-cyan-400 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/30 transition-all duration-300'
         >
           {isOpen ? <FiX size={24}/> : <FiMenu size={24}/>}
         </button>
@@ -83,17 +83,17 @@ const Navbar = () => {
                 <a
                   href={`#${item.id}`}
                   onClick={()=>handleItems(item.id)}
-                  className={`block rounded-xl px-4 py-3 transition-all duration-300 hover:translate-x-1 hover:bg-purple-700/20 hover:text-purple-700 hover:shadow-lg hover:shadow-purple-500/20 ${activeSession === item.id ? "text-purple-700 bg-purple-700/10 shadow-lg shadow-purple-500/20" : ""}`}
+                  className={`block rounded-xl px-4 py-3 transition-all duration-300 hover:translate-x-1 hover:bg-cyan-700/20 hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 ${activeSession === item.id ? "text-cyan-400 bg-cyan-700/10 shadow-lg shadow-cyan-500/20" : ""}`}
                 >
                   {item.label}
                 </a>
               </li>
             ))}
             <li className='flex gap-4 px-4 py-3 sm:hidden'>
-              <button type='button' onClick={()=>openExternal(githubUrl)} aria-label='Open GitHub profile' className='transition-all duration-300 hover:-translate-y-0.5 hover:text-purple-700 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.9)]'>
+              <button type='button' onClick={()=>openExternal(githubUrl)} aria-label='Open GitHub profile' className='transition-all duration-300 hover:-translate-y-0.5 hover:text-cyan-400 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.6)]'>
                 <FaGithub size={24}/>
               </button>
-              <button type='button' onClick={()=>openExternal(linkedinUrl)} aria-label='Open LinkedIn profile' className='transition-all duration-300 hover:-translate-y-0.5 hover:text-purple-700 hover:drop-shadow-[0_0_8px_rgba(168,85,247,0.9)]'>
+              <button type='button' onClick={()=>openExternal(linkedinUrl)} aria-label='Open LinkedIn profile' className='transition-all duration-300 hover:-translate-y-0.5 hover:text-cyan-400 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.6)]'>
                 <FaLinkedin size={24}/>
               </button>
             </li>

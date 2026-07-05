@@ -11,7 +11,7 @@ const Footer = () => {
       <div className='flex justify-center items-center gap-4 h-[5rem] bg-gradient-to-t from-black to-purple-700/50 w-full flex-wrap'>
         {['About','Education','Skills','Work','Contact'].map((e,i)=>(
           <a href={`#${e}`}>
-            <h4 key={i} onClick={()=>handleSection(e)} className={` cursor-pointer font-semibold ${activeSection == e?'text-purple-700':'text-white'}`} >{e}</h4>
+            <h4 key={i} onClick={()=>handleSection(e)} className={` cursor-pointer  hover:text-cyan-400 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.6)] font-semibold ${activeSection == e?'text-purple-700':'text-white'}`} >{e}</h4>
           </a>
         ))}
       </div>

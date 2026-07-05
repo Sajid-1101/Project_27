@@ -77,7 +77,7 @@ const Contact = () => {
           <input required type="email" name='email' value={formData.email} onChange={handleChange} placeholder='Your Email' className='p-4 w-full focus:outline-none bg-gradient-to-t from-black to-purple-900/20 rounded-2xl shadow-2xl shadow-purple-500/10 mb-4'/>
           <input required type="text" placeholder='Subject' name='title' value={formData.title} onChange={handleChange} className='p-4 w-full focus:outline-none bg-gradient-to-t from-black to-purple-900/20 rounded-2xl shadow-2xl shadow-purple-500/10 mb-4'/>
           <textarea required name='message' value={formData.message} onChange={handleChange} placeholder='Description' cols={30} rows={5} className='p-4 w-full focus:outline-none bg-gradient-to-t from-black to-purple-900/20 rounded-2xl shadow-2xl shadow-purple-500/10 mb-4'/>
-          <button disabled={loading} className='p-4 w-full focus:outline-none bg-gradient-to-r from-pink-600 to-purple-500 rounded-2xl shadow-2xl shadow-purple-500/10 mb-4 font-semibold text-lg hover:from-pink-500 hover:to-purple-400 disabled:opacity-60 disabled:cursor-not-allowed'>
+          <button disabled={loading} className='cursor-pointer p-4 w-full focus:outline-none bg-gradient-to-r from-pink-600 to-purple-500 rounded-2xl shadow-2xl shadow-purple-500/10 mb-4 font-semibold text-lg hover:from-pink-500 hover:to-purple-400 disabled:opacity-60 disabled:cursor-not-allowed'>
             {loading ? 'Sending...' : 'Send Message'}
           </button>
           {status && <p className='text-center text-sm text-gray-300'>{status}</p>}

@@ -1,6 +1,7 @@
 import React from "react";
 import employee from "../../assets/work_logo/emp-manager-management.png";
 import tictactoe from "../../assets/work_logo/tictactoe.png";
+import gategpt from "../../assets/work_logo/gategpt.png";
 
 const projects = [
   {
@@ -22,6 +23,42 @@ const projects = [
     ],
   },
   {
+    title: "GateGPT – Multi-Agent AI Teaching Assistant",
+    linkLabel: "See Github",
+    link: "https://github.com/Sajid-1101/MultiAgent-GateGPT",
+    image: gategpt,
+    imageAlt: "GateGPT project preview",
+    description:
+    "An AI-powered GATE Computer Science teaching assistant built using a Multi-Agent RAG architecture. GateGPT retrieves answers from a curated knowledge base, routes queries through specialized agents, verifies responses to reduce hallucinations, and generates accurate explanations using Gemini AI.",
+    techStack:
+    "Python, Flask, LangChain, FAISS, Google Gemini API, React, Vite",
+    learningOutcomes: [
+      "Designed and implemented a Multi-Agent Retrieval-Augmented Generation (RAG) architecture.",
+      "Built specialized agents for concept retrieval, previous-year questions, query routing, and response verification.",
+      "Integrated FAISS vector search with LangChain for efficient semantic retrieval.",
+      "Implemented a verification pipeline to minimize hallucinations using retrieved context.",
+      "Developed a React + Flask full-stack application and deployed the project on GitHub.",
+    ],
+  },
+  {
+    title: "Employee_Manager_Management",
+    linkLabel: "See Live",
+    link: "https://emp-manager-management.netlify.app/",
+    image: employee,
+    imageAlt: "Employee management project preview",
+    description:
+    "A web-based platform for managing company employees. It includes features like user authentication, role-based dashboards, and employee data management.\n\nAdmin Login: admin@company.com / 123\nEmployee (Sam) Login: e@c.com / 123",
+    techStack: "ReactJS, TailwindCSS",
+    learningOutcomes: [
+      "Built a role-based Employee Management System using React.js.",
+      "Implemented Admin and Employee login with conditional rendering.",
+      "Used React hooks for state and lifecycle management.",
+      "Handled forms and basic validation in React.",
+      "Designed UI responsive for sm, md, and lg screens using CSS.",
+      "Deployed the app on Netlify for live access.",
+    ],
+  },
+  {
     title: "RAG-Based AI Teaching Assistant",
     linkLabel: "GitHub",
     link: "https://github.com/Sajid-1101/RAG-Based---AI-Teaching-Assistant",
@@ -38,41 +75,6 @@ const projects = [
       "Improved understanding of practical RAG pipelines for educational use cases.",
     ],
   },
-  {
-    title: "Employee_Manager_Management",
-    linkLabel: "See Live",
-    link: "https://emp-manager-management.netlify.app/",
-    image: employee,
-    imageAlt: "Employee management project preview",
-    description:
-      "A web-based platform for managing company employees. It includes features like user authentication, role-based dashboards, and employee data management.\n\nAdmin Login: admin@company.com / 123\nEmployee (Sam) Login: e@c.com / 123",
-    techStack: "ReactJS, TailwindCSS",
-    learningOutcomes: [
-      "Built a role-based Employee Management System using React.js.",
-      "Implemented Admin and Employee login with conditional rendering.",
-      "Used React hooks for state and lifecycle management.",
-      "Handled forms and basic validation in React.",
-      "Designed UI responsive for sm, md, and lg screens using CSS.",
-      "Deployed the app on Netlify for live access.",
-    ],
-  },
-  {
-    title: "TicTacToe-TwoPlayer-Game",
-    linkLabel: "See Live",
-    link: "https://tictac-t-o-e-game.netlify.app/",
-    image: tictactoe,
-    imageAlt: "Tic Tac Toe project preview",
-    description:
-      "A two-player Tic Tac Toe game where players take turns marking X or O on a 3x3 grid, aiming to align three symbols in a row, column, or diagonal. Includes win/draw detection and reset functionality.",
-    techStack: "HTML, CSS, JavaScript",
-    learningOutcomes: [
-      "Built a fully functional Tic Tac Toe game using HTML, CSS, and JavaScript.",
-      "Gained understanding of game logic, event handling, and DOM manipulation.",
-      "Implemented turn-based gameplay with win/tie detection.",
-      "Practiced modular code structure and basic debugging.",
-      "Deployed the project on Netlify for public access.",
-    ],
-  }
   
 ];
 
@@ -108,7 +110,7 @@ const Work = () => {
               <img
                 src={project.image}
                 alt={project.imageAlt}
-                className="h-52 w-full rounded-lg border border-white object-cover shadow-2xl hover:shadow-purple-500/50 sm:h-60"
+                className="h-52 w-full rounded-lg border border-white object-cover shadow-2xl transition-all duration-300 hover:border-cyan-300 hover:shadow-cyan-400/30 sm:h-60"
               />
             </button>
 

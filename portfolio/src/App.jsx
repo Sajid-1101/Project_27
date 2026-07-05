@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className='site-glow-bg bg-[#050414]'>
-      <div className='relative z-1 pt-10'>
+      <div className='relative z-1 pt-24'>
         <Navbar/>
         <About/>
         <Experience/>
