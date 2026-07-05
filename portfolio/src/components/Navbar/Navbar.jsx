@@ -26,7 +26,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-amber-900/10 sticky top-0 px-4 sm:px-8 lg:px-20 backdrop-blur-lg z-200" >
+    <nav className="fixed left-0 top-0 z-[9999] w-full border-b border-white/10 bg-[#050414]/85 px-4 shadow-lg shadow-black/20 backdrop-blur-xl sm:px-8 lg:px-20" >
       <div className='text-white py-5 flex justify-between items-center gap-4'>
         <a
           href="#About"
